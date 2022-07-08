@@ -1,0 +1,20 @@
+body{
+    margin: 20px;
+}
+h1{
+    text-align: center;
+    color: green;
+}
+table{
+    width: 100%;
+}
+th{
+    background-color: yellow;
+}
+tr{
+    background-color: lightblue;
+    color: blue;
+}
+tr:hover{
+    background-color: lawngreen;
+}

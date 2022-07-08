@@ -1,0 +1,59 @@
+<h1>Adding Movie Record</h1>
+<hr>
+<form (ngSubmit) = "Save(moviedata)" #movieform="ngForm">
+    <table>
+        <tr>
+            <td>
+            <label for="id">ID:</label>
+            </td>
+            <td>
+                <input type="number" id="id" name="id" required
+                [(ngModel)]="moviedata.id" #id=ngModel/>
+            </td>
+            <td>
+                <div *ngIf="id.invalid && (id.dirty || id.touched)"
+                style="color: red;">
+                <div *ngIf="id.errors?.['required']">
+                    Id cannot be blank
+                </div>
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="name">Name:</label>
+            </td>
+            <td>
+                <input type="text" id="name" name="name" 
+                [(ngModel)]="moviedata.name" #name=ngModel/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="year">Year:</label>
+            </td>
+            <td>
+                <input type="number" id="year" name="year" 
+                [(ngModel)]="moviedata.year" #year=ngModel/>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="rating">Rating:</label>
+            </td>
+            <td>
+                <input type="number" id="rating" name="rating" 
+                [(ngModel)]="moviedata.rating" #rating=ngModel/>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Save" [disabled]='!movieform.valid'/>
+            </td>
+        </tr>
+    </table>
+
+</form>

@@ -1,0 +1,20 @@
+<p>My name is {{name}}</p>
+<p>Age is {{age}}</p>
+<p>City is {{city}}</p>
+<hr>
+<p>
+    He is {{age > 18 ? "elgible for CR Post" : "Not elgible" }}
+</p>
+<hr>
+<input type="text" value="Mango"/><br>
+<input type="text" [value]="city"/><br>
+<!-- <input type="text" value={{city}}/><br> -->
+<input type="button" [value]="name"/><br>
+<button>{{name}}</button><br>
+<button [disabled]="age >20?true:false">Click Me</button>
+<br><br>
+<label for="Mstatus">Martial status</label>
+<input type="checkbox"  [checked]="MStatus"/>
+<input type="button" value="Click" (click)="Show()"/>
+<br><br>
+<input type="text" [(ngModel)]="name"/>
